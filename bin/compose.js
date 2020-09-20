@@ -39,7 +39,7 @@ yargs.command({
                 };
 
                 // Copy default installation files into project directory.
-                fs.copyFile(path.join(rootDir, '.gitignore'), path.join(process.cwd(), '.gitignore'), fileHandler);
+                fs.copyFile(path.join(rootDir, 'gitignore.txt'), path.join(process.cwd(), '.gitignore'), fileHandler);
                 fs.copyFile(path.join(rootDir, 'main.ts'), path.join(process.cwd(), 'src/main.ts'), fileHandler);
                 fs.copyFile(path.join(rootDir, 'webpack.config.js'), path.join(process.cwd(), 'webpack.config.js'), fileHandler);
 
