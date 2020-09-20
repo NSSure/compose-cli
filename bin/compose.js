@@ -21,8 +21,6 @@ yargs.command({
                 const fs = require('fs');
                 const requiredDirs = ['./src', './dist'];
 
-                console.log(__dirname);
-
                 let rootDir = path.join(__dirname, 'typescript-scaffold');
 
                 // Create required directories if they do not exist yet.
@@ -41,9 +39,9 @@ yargs.command({
                 };
 
                 // Copy default installation files into project directory.
-                fs.copyFile(path.join(rootDir, '.gitignore'), path.join(__dirname, '/../.gitignore'), fileHandler);
-                fs.copyFile(path.join(rootDir, 'main.ts'), path.join(__dirname, '/../src/main.ts'), fileHandler);
-                fs.copyFile(path.join(rootDir, 'webpack.config.js'), path.join(__dirname, '/../webpack.config.js'), fileHandler);
+                fs.copyFile(path.join(rootDir, '.gitignore'), path.join(process.cwd(), '.gitignore'), fileHandler);
+                fs.copyFile(path.join(rootDir, 'main.ts'), path.join(process.cwd(), 'src/main.ts'), fileHandler);
+                fs.copyFile(path.join(rootDir, 'webpack.config.js'), path.join(process.cwd(), 'webpack.config.js'), fileHandler);
 
                 // Run the bat file it initialize npm, installs default packages, and configures typescript.
                 let bat = path.join(__dirname, 'typescript-scaffold/scaffold.bat');
