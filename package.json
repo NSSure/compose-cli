@@ -1,0 +1,25 @@
+{
+  "name": "compose-cli",
+  "version": "0.2.0",
+  "main": "bin/index.js",
+  "author": "",
+  "license": "ISC",
+  "bin": {
+    "compose": "./bin/compose.js"
+  },
+  "dependencies": {
+    "chalk": "^4.1.0",
+    "yargs": "^16.0.3"
+  },
+  "keywords": [
+    "cli",
+    "init",
+    "bootstrapping",
+    "scaffolding"
+  ],
+  "description": "Command line tool for quickly generating various project scaffolds",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
