@@ -45,8 +45,6 @@ yargs.command({
                 fs.copyFile(path.join(rootDir, 'main.ts'), path.join(__dirname, '/../src/main.ts'), fileHandler);
                 fs.copyFile(path.join(rootDir, 'webpack.config.js'), path.join(__dirname, '/../webpack.config.js'), fileHandler);
 
-                return;
-
                 // Run the bat file it initialize npm, installs default packages, and configures typescript.
                 let bat = path.join(__dirname, 'typescript-scaffold/scaffold.bat');
                 let scaffoldProcess = exec(bat);
