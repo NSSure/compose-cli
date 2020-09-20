@@ -21,7 +21,7 @@ yargs.command({
                 const fs = require('fs');
                 const requiredDirs = ['./src', './dist'];
 
-                let rootDir = path.join(__dirname, 'typescript-scaffold');
+                let rootDir = path.join(process.cwd(), 'typescript-scaffold');
 
                 // Create required directories if they do not exist yet.
                 requiredDirs.forEach((requiredDir) => {
